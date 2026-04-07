@@ -1,0 +1,32 @@
+[package]
+name = "truth_engine"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "truth"
+path = "src/bin/truth.rs"
+
+[[bin]]
+name = "slm_train"
+path = "src/bin/slm_train.rs"
+
+[[bin]]
+name = "slm_chat"
+path = "src/bin/slm_chat.rs"
+
+[[bin]]
+name = "logic_codegen"
+path = "src/bin/logic_codegen.rs"
+
+[[bin]]
+name = "phantom_cli"
+path = "src/bin/phantom_cli.rs"
+
+[profile.release]
+lto = true
+codegen-units = 1
+
